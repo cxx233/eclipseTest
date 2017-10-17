@@ -55,7 +55,7 @@ public class StringUtil {
 	 * 是否可转化为数字
 	 * 判断是否为数字，用new BigDecimal(o.toString());对象
 	 * @param o 对象
-	 * @return 如果是数字，则返回true，否则返回false；
+	 * @return 如果是数字，则返回true，否则返回false
 	 */
 	public static boolean isNum(Object o) {
 		try {
@@ -67,9 +67,9 @@ public class StringUtil {
 	}
 	
 	/**
-	 * 是否可
+	 * 是否可转化为Long型数字
 	 * @param o
-	 * @return
+	 * @return  如果可转则为true，否则则为false
 	 */
 	public static boolean isLong(Object o) {
 		try {
@@ -79,5 +79,19 @@ public class StringUtil {
 		}
 		return false;
 	}
+	
+	/**
+	 * 转化为Long型数字，不可转化时返回0
+	 * @param o
+	 * @return
+	 */
+	public static Long toLong(Object o) {
+		if(isLong(o)){
+			return new Long(o.toString());
+		}else {
+			return 0L;
+		}
+	}
+	
 	
 }
