@@ -51,9 +51,29 @@ public class StringUtil {
 		}
 	}
 	
+	/**
+	 * 是否可转化为数字
+	 * 判断是否为数字，用new BigDecimal(o.toString());对象
+	 * @param o 对象
+	 * @return 如果是数字，则返回true，否则返回false；
+	 */
 	public static boolean isNum(Object o) {
 		try {
 			new BigDecimal(o.toString());
+			return true;
+		} catch (Exception e) {
+		}
+		return false;
+	}
+	
+	/**
+	 * 是否可
+	 * @param o
+	 * @return
+	 */
+	public static boolean isLong(Object o) {
+		try {
+			new Long(o.toString());
 			return true;
 		} catch (Exception e) {
 		}
