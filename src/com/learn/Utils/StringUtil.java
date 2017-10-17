@@ -1,4 +1,7 @@
 package com.learn.Utils;
+
+import java.math.BigDecimal;
+
 /**
  * 类名称：StringUtil
  * 创建人：cxx （从TG那学习得来）
@@ -47,4 +50,14 @@ public class StringUtil {
 			return true;
 		}
 	}
+	
+	public static boolean isNum(Object o) {
+		try {
+			new BigDecimal(o.toString());
+			return true;
+		} catch (Exception e) {
+		}
+		return false;
+	}
+	
 }
